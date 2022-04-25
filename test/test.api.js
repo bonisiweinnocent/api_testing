@@ -191,6 +191,10 @@ describe('The Garment API', function () {
 		console.log(garmentsGrouped + "qoqoqooqo");
 		// write your code above this line
 		const expectedResult = [
+			{
+				gender: 'Unisex',
+				count: '4'
+			},
 			
 			{
 				gender: 'Male',
@@ -199,10 +203,6 @@ describe('The Garment API', function () {
 			{
 				gender: 'Female',
 				count: '16'
-			},
-			{
-				gender: 'Unisex',
-				count: '4'
 			}
 
 		]

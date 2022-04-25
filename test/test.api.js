@@ -111,9 +111,9 @@ describe('The Garment API', function () {
 
 		// write your code above this line
 
-		// const gender_count_sql = 'select count(*) from garment where gender = $1'
-		// const maleCount = await db.one(gender_count_sql, ['Male'], r => r.count);
-		// const femaleCount = await db.one(gender_count_sql, ['Female'], r => r.count);
+		const gender_count_sql = 'select count(*) from garment where gender = $1'
+		const maleCount = await db.one(gender_count_sql, ['Male'], r => r.count);
+		const femaleCount = await db.one(gender_count_sql, ['Female'], r => r.count);
 
 		const maleResult = await supertest(app).get(`/api/garments?gender=Male`);
 		// console.log(maleResult.body.data);
@@ -183,18 +183,15 @@ describe('The Garment API', function () {
 
 		// and below this line for this function will
 		const result = await supertest(app)
-				.get(`/api/garments/grouped`)
-				.expect(200);
+			.get(`/api/garments/grouped`)
+			.expect(200);
 
 		const garmentsGrouped = result.body;
 		// console.log(garmentsGrouped);
-
+		console.log(garmentsGrouped + "qoqoqooqo");
 		// write your code above this line
 		const expectedResult = [
-			{
-				gender: 'Unisex',
-				count: '4'
-			},
+			
 			{
 				gender: 'Male',
 				count: '15'
@@ -202,8 +199,12 @@ describe('The Garment API', function () {
 			{
 				gender: 'Female',
 				count: '16'
+			},
+			{
+				gender: 'Unisex',
+				count: '4'
 			}
-			
+
 		]
 		assert.deepStrictEqual(expectedResult, garmentsGrouped.data)
 	});

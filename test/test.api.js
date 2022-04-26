@@ -100,7 +100,6 @@ describe('The Garment API', function () {
 			.get(`/api/garment/${garment.id}`)
 			.expect(200);
 
-		// console.log(response.body)
 
 		assert.equal('Unisex', response.body.data.gender);
 
@@ -188,7 +187,7 @@ describe('The Garment API', function () {
 
 		const garmentsGrouped = result.body;
 		// console.log(garmentsGrouped);
-		console.log(garmentsGrouped + "qoqoqooqo");
+	
 		// write your code above this line
 		const expectedResult = [
 			{

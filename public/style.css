@@ -1,0 +1,170 @@
+body {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+	 background:  goldenrod;
+}
+
+.container {
+	margin: auto;
+	width: 60%;
+}
+
+img {
+	display: inline-block;
+}
+
+.caption {
+	display: block;
+	text-align: center;
+}
+
+.garments {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.garment {
+	flex : 1;
+	background-color: beige;
+	border: 1px solid greenyellow;
+	padding: 1em;
+	margin: 0.25em;
+	border-radius: 0.5em;
+}
+
+.hidden {
+	display: none;
+}
+
+.field label {
+	display: block;
+	width: 5em;
+	margin-top: 0.5em;
+}
+
+.mt1 {
+	margin-top: 1em;
+}
+
+
+.message {
+
+	margin-top: 1em;
+	padding: 1em;
+
+	background-color: lightsalmon;
+
+
+}
+
+/* body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(image.png);
+    background-size: cover;
+} */
+ .contain{
+    /* width: 300px;
+    padding: 30px; */
+    /* position: absolute;  */
+    /* top: 50%;
+    left: 50%;  */
+    /* transform: translate(-50%,-50%);  */
+    background:  goldenrod;
+    text-align: center;
+    border: 3px soli greenyellow;
+    border-radius: 15px;
+} 
+.contain h1{
+    color: white;
+    text-transform: uppercase; 
+     font-weight: 700; 
+}
+.searchResults{
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.contain input[type ="text"],.contain input[type ="password"]{
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid palevioletred;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.75px;
+
+} 
+.contain input[type ="text"]:focus,.contain  input[type ="password"]:focus{
+    width: 270px;
+    border-color: yellow;
+
+} 
+ .contain input[type ="submit"]{
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 3px solid orangered;
+    padding: 10px 25px;
+    width: 100px;
+    outline: none;
+    color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.75px;
+    cursor: pointer;
+} 
+
+ .contain input[type ="submit"]:hover{
+    background-color: aquamarine;
+} 
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+	visibility: hidden; /* Hidden by default. Visible on click */
+	min-width: 250px; /* Set a default minimum width */
+	margin-left: -125px; /* Divide value of min-width by 2 */
+	background-color: #333; /* Black background color */
+	color: #fff; /* White text color */
+	text-align: center; /* Centered text */
+	border-radius: 2px; /* Rounded borders */
+	padding: 16px; /* Padding */
+	position: fixed; /* Sit on top of the screen */
+	z-index: 1; /* Add a z-index if needed */
+	left: 50%; /* Center the snackbar */
+	bottom: 30px; /* 30px from the bottom */
+  }
+  
+
+  #snackbar.show {
+	visibility: visible; 
+
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+ 
+  @-webkit-keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+	from {bottom: 0; opacity: 0;}
+	to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+	from {bottom: 30px; opacity: 1;}
+	to {bottom: 0; opacity: 0;}
+  }
